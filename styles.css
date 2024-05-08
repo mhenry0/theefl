@@ -1,0 +1,98 @@
+/* Add your CSS styles for the button here */
+#backToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+}
+/* Add your CSS styles here */
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.faq-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust the gap between columns as needed */
+}
+
+.faq-column {
+    flex: 1;
+}
+
+.question {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+}
+
+.answer {
+    font-size: 16px;
+    color: #666;
+}
+/* Add your CSS styles here */
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.question {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+}
+
+.answer {
+    font-size: 16px;
+    color: #666;
+}
+
+
+
+
+/* CSS to remove blue underline and style links */
+a {
+    text-decoration: none; /* Remove underline */
+    color: #f20909; /* Set link color to your desired color */
+}
+/* Style links on hover */
+a:hover {
+    text-decoration: underline; /* Add underline on hover if desired */
+    color: #49e8a3; /* Change color on hover if desired */
+}
+
+
+
+
+/* Add WA floating button CSS */
+.floating {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 60px;
+    left: 40px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+   }
+   
+   .fab-icon {
+    margin-top: 16px;
+   }
+  
+  
+  
