@@ -14,12 +14,6 @@ backToTopButton.addEventListener("click", () => {
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
 });
 
-// JavaScript code to close the WhatsApp chat bubble
-function closeChatBubble() {
-    const chatBubble = document.getElementById("whatsapp-chat-bubble");
-    chatBubble.style.display = "none";
-}
-
 
 
 
