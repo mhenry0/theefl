@@ -79,7 +79,7 @@ a:hover {
     position: fixed;
     width: 60px;
     height: 60px;
-    bottom: 60px;
+    bottom: 120px;
     left: 40px;
     background-color: #25d366;
     color: #fff;
@@ -95,4 +95,16 @@ a:hover {
    }
   
   
+   .responsive-button {
+    margin-top: 100px;
+    width: 100%; /* Button will take up 100% of its container's width */
+    height: 45px; /* Maintains original height */
+    font-size: calc(1em + 0.5vw); /* Font size adjusts based on viewport width */
+    background-color: #111fb6;
+    color: #25d366;
+    display: inline-block;
+    border-radius: 30px;
+    padding: 0 20px; /* Adds some padding for better readability on smaller screens */
+    text-align: center; /* Ensures text stays centered within the button */
+  }
   
