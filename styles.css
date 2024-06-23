@@ -1,98 +1,111 @@
-/* Add your CSS styles for the button here */
-#backToTopBtn {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 99;
-}
-/* Add your CSS styles here */
-.faq-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-}
-
-.faq-columns {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Adjust the gap between columns as needed */
-}
-
-.faq-column {
-    flex: 1;
-}
-
-.question {
-    font-weight: bold;
-    font-size: 18px;
-    color: #333;
-}
-
-.answer {
-    font-size: 16px;
-    color: #666;
-}
-/* Add your CSS styles here */
-.faq-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-}
-
-.faq-item {
-    margin-bottom: 20px;
-}
-
-.question {
-    font-weight: bold;
-    font-size: 18px;
-    color: #333;
-}
-
-.answer {
-    font-size: 16px;
-    color: #666;
+.iframe-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust the height as needed */
 }
 
 
-
-
-/* CSS to remove blue underline and style links */
-a {
-    text-decoration: none; /* Remove underline */
-    color: #f20909; /* Set link color to your desired color */
+video {
+  max-width: 80%; /* Optional: Limit the video width */
+  height: auto; /* Optional: Maintain aspect ratio */
 }
-/* Style links on hover */
-a:hover {
-    text-decoration: underline; /* Add underline on hover if desired */
-    color: #49e8a3; /* Change color on hover if desired */
+
+
+.text-center {
+  position: relative; /* Set the parent element to relative positioning */
+}
+
+button {
+  position: absolute; /* Position the button absolutely within the parent */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust positioning if needed */
+}
+
+ /* Add WA floating button CSS */
+ .floating {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 60px;
+  right: 40px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+ }
+ 
+ .fab-icon {
+  margin-top: 16px;
+ }
+
+
+
+#properties {
+  padding-left: 10px;
+}
+
+
+.navbar-brand {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 
 
 
-/* Add WA floating button CSS */
-.floating {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 60px;
-    left: 40px;
-    background-color: #25d366;
-    color: #fff;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 30px;
-    box-shadow: 2px 2px 3px #999;
-    z-index: 100;
-   }
-   
-   .fab-icon {
-    margin-top: 16px;
-   }
+
+.slider {
+  aspect-ratio: 90 / 40;
+  width: auto;
+  position: relative;
+  display: flex;
+  overflow: scroll;
+}
+
+.slider img {
+
+  width: 100%;
+  left: 0;
+  position: sticky;
+  object-fit: cover;
+  border-radius: 5px;
+  scroll-snap-align: center;
+flex-shrink: 0;
+
+
+}
+
+
+.navbar{
+  background-color: #111fb6;
+  font-style: bold;
   
-  
-  
+}
+
+
+
+
+
+
+
+@media (max-width: 992px) {
+  /* Styles for screens smaller than 992px (e.g., tablets) */
+  .navbar-nav {
+    /* Adjust navigation item styles (optional) */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Styles for screens smaller than 768px (e.g., smartphones) */
+  .navbar-nav {
+    /* Adjust navigation for mobile, likely stacking vertically */
+    flex-wrap: wrap; /* Wrap navigation items to multiple lines */
+    justify-content: center; /* Center navigation items horizontally */
+  }
+}
