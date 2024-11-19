@@ -94,12 +94,6 @@ flex-shrink: 0;
 
 
 
-@media (max-width: 992px) {
-  /* Styles for screens smaller than 992px (e.g., tablets) */
-  .navbar-nav {
-    /* Adjust navigation item styles (optional) */
-  }
-}
 
 @media (max-width: 768px) {
   /* Styles for screens smaller than 768px (e.g., smartphones) */
@@ -109,3 +103,7 @@ flex-shrink: 0;
     justify-content: center; /* Center navigation items horizontally */
   }
 }
+
+
+
+
