@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Aprende Inglés de una manera práctica y con significado">
+    <meta name="keywords" content="Idiomas, clases de inglés, curso de inglés en línea, pronunciación del inglés, fonética, profesor, gramática inglesa, aprender inglés como segundo idioma (ESL), construcción de vocabulario,Aprender inglés online,
+    Clases de inglés para principiantes,Clases de inglés conversacional,Mejora tu inglés para el trabajo,Preparación para exámenes de inglés,Clases de inglés con profesores nativos,Cursos de inglés personalizados,Aprender inglés de forma divertida,
+    Inglés para viajes,Inglés para negocios">
+    <meta name="author" content="Sebastian Mora">
+    <link rel="stylesheet" href="css/styles.css" media="screen">
+    <link rel="shortcut icon" type="icon" href="img/logonegrotransparente.png">
+    <title>El Laboratorio de Inglés 506</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />   
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">  
+  </head>
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D9TVSGVDY0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D9TVSGVDY0');
+</script>
+  <body>
+
+
+
+
+
+ <!-- ===== NAVBAR CORPORATIVO ===== -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-brand shadow-sm">
+    <div class="container-lg">
+
+      <!-- LOGO A LA IZQUIERDA -->
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="img/transparentlogo.png" alt="Logo El Laboratorio de Idiomas"
+             width="56" height="56" class="rounded-pill" loading="lazy">
+      </a>
+
+      <!-- TOGGLER (móviles) -->
+      <button class="navbar-toggler border-0" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- ENLACES + BOTÓN (derecha) -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav mb-2 mb-lg-0 text-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link px-3" href="index.html">Inicio</a></li>
+                              <li class="nav-item"><a class="nav-link px-3" href="metodologia.html">Metodología</a></li>
+
+          <li class="nav-item"><a class="nav-link px-3" href="cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="nosotros.html">Nosotros</a></li>
+
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+<!-- ===== ESTILOS PERSONALIZADOS ===== -->
+<style>
+  /* Fondo corporativo */
+  .bg-brand { background-color: #001E50; }
+
+  /* Links – colores */
+  .navbar-dark .nav-link {
+    position: relative;                       /* ⚠️ necesario para pseudo-elemento */
+    color: rgba(255, 255, 255, 0.85);
+    transition: color .2s;
+  }
+  .navbar-dark .nav-link:hover,
+  .navbar-dark .nav-link.active {
+    color: #ffffff;
+    text-decoration: none;                    /* sin subrayado clásico */
+  }
+
+  /* ===== Barra animada (excepto el botón) ===== */
+  .navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;                                  /* se extiende a todo el ancho */
+    bottom: -4px;                             /* distancia bajo el texto */
+    width: 100%;
+    height: 2px;                              /* grosor de la barra */
+    background: #ffffff;
+    transform: scaleX(0);                     /* inicia oculta desde el centro */
+    transform-origin: center;                 /* se “abre” hacia ambos lados */
+    transition: transform .3s ease-out;
+  }
+  .navbar-nav .nav-link:hover::after,
+  .navbar-nav .nav-link.active::after {
+    transform: scaleX(1);                     /* barra visible al 100 % */
+  }
+</style>
+
+
+
+
+
+
+
+
+
+
+<!-- ===== SECCIÓN · CURSOS ===== -->
+<section id="cursos" class="container my-5">
+
+  <!-- Encabezado -->
+  <h1 class="text-center mb-3" style="color: #001E50;">Nuestros Cursos</h1>
+  <p class="text-center mb-3">
+    Ofrecemos tres niveles de inglés (básico, intermedio y avanzado), servicios complementarios y
+    programas especializados en áreas técnicas.
+  </p>
+  <hr class="w-50 mx-auto mb-5">
+
+<!-- ===== CURSOS CON FONDO ===== -->
+<style>
+  /* Carta con imagen de fondo */
+  .card-bg {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: #fff;                     /* texto blanco encima de la foto */
+  }
+  /* Capa oscura para mejorar legibilidad */
+  .card-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+  }
+  /* Coloca el contenido encima de la capa oscura */
+  .card-bg > .card-body {
+    position: relative;
+    z-index: 1;
+  }
+</style>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+
+  <!-- Inglés Básico -->
+  <div class="col">
+    <div class="card h-100 border-dark shadow-sm card-bg text-dark"
+    >
+      <div class="card-body">
+        <H4 class="card-title text-center mb-3">Inglés Básico / Elemental</H4>
+        <ul class="small">
+          
+  <li>Present simple (understanding and using the verb to be to complete simple sentences).</li>
+  <li>Asking WH questions.</li>
+  <li>Asking and answering questions with the verb to-be.</li>
+  <li>Possessive pronouns (my, your, his, her, its, our, their).</li>
+  <li>Prepositions of time, place, movement, direction, possession, measure, material.</li>
+  <li>Possessives (mine, yours, his, hers, its, ours, theirs).</li>
+  <li>Describing my daily routine and what other people’s actions.</li>
+  <li>Adverbs of frequency (always, usually, normally, often, sometimes, rarely, never, occasionally).</li>
+  <li>Present progressive simple –ing and gerunds introduction, questions and answers.</li>
+  <li>Gerunds: describing what we are doing at the time, and what is happening around us.</li>
+  <li>Using the –ing to talk about future actions.</li>
+
+        </ul>
+        Y otros temas más.
+        <p class="text-center mt-3 fw-semibold">₡7500 por hora, privado</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Inglés Intermedio -->
+  <div class="col">
+    <div class="card h-100 border-dark shadow-sm card-bg text-dark"
+>
+      <div class="card-body">
+        <H4 class="card-title text-center mb-3">Inglés Intermedio</H4>
+        <ul class="small">
+  <li>Using already, just, ever, never, yet, for, since.</li>
+  <li>Simple past vs present perfect.</li>
+  <li>Present perfect progressive to talk about things that we have been doing.</li>
+  <li>Using modal verbs in the past.</li>
+  <li>Would have, could have, must have, should have, might have, may have.</li>
+  <li>Past Perfect Tense (had).</li>
+  <li>Past Perfect Progressive (had + been + -ing): how and why we use it.</li>
+  <li>Future Perfect Tense (will have).</li>
+  <li>Using –ing and –ed as adjectives.</li>
+  <li>Causative verbs.</li>
+        </ul>
+        Y otros temas más.
+        <p class="text-center mt-3 fw-semibold">₡7500 por hora, privado</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Inglés Avanzado -->
+  <div class="col">
+    <div class="card h-100 border-dark shadow-sm card-bg text-dark"
+>
+      <div class="card-body">
+        <H4 class="card-title text-center mb-3">Inglés Avanzado</H4>
+        <ul class="small">
+  <li>Idioms, expressions, and colloquial language</li>
+  <li>Proverbs</li>
+  <li>Slang and informal expressions</li>
+  <li>Clichés</li>
+  <li>Synonyms, antonyms, and nuances of meaning</li>
+  <li>Homonyms, homophones, homographs</li>
+  <li>Collocations</li>
+  <li>Reported speech</li>
+  <li>Connected speech</li>
+  <li>Easily confusing words</li>
+  <li>Ellipsis</li>
+  <li>Cleft sentences</li>
+        </ul>
+        Y otros temas avanzados según tus necesidades y objetivos específicos.
+        <p class="text-center mt-3 fw-semibold">₡7500 por hora, privado</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tutorías -->
+  <div class="col">
+    <div class="card h-100 border-dark shadow-sm card-bg text-dark"
+>
+      <div class="card-body">
+        <H4 class="card-title text-center mb-3">Tutorías de Inglés</H4>
+        <p class="small text-center">
+          Personalizadas según tu temario académico. Grupos de máximo 5 estudiantes.
+        </p>
+        <p class="text-center mt-3 fw-semibold">₡5500 por hora, 1 persona. 2 personas ₡4500 por hora cada una. 3 personas ₡4000 por hora cada una. 4 personas ₡3500 por hora cada una. 5 personas ₡3000 por hora cada una.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fonética -->
+  <div class="col">
+    <div class="card h-100 border-dark shadow-sm card-bg text-dark"
+    >
+      <div class="card-body">
+        <H4 class="card-title text-center mb-3">Fonética del Inglés Americano</H4>
+        <p class="small text-center">
+Curso de 5 semanas (3 h/semana aproximadamente) para dominar sonidos clave: /iː/, /ɪ/, /æ/, /ɑː/, /ɒ/, /ɔː/, /uː/, /ʊ/, /ʌ/, /ɜː/, /ə/, /eɪ/, /aɪ/, /ɔɪ/, /aʊ/, /əʊ/, /oʊ/, /ɪə/, /eə/, /ʊə/, /d/, /ŋ/, /v/, /θ/, /ð/, /s/, /z/, /ʃ/, /ʒ/, /h/, /tʃ/, /dʒ/, /r/, /j/, /w/.
+        </p>
+        <p class="text-center mt-3 fw-semibold">₡9000 por hora, privado</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Inglés para Turismo -->
+  <div class="col">
+    <div class="card h-100 border-dark shadow-sm card-bg text-dark"
+     >
+      <div class="card-body">
+        <H4 class="card-title text-center mb-3">Inglés para Turismo</H4>
+        <p class="small text-center">
+          Inglés para recepcionistas, guías, meseros, mucamas, y otros roles hoteleros.
+        </p>
+        <p class="text-center mt-3 fw-semibold">₡5500 por hora, persona.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+</section>
+
+
+<div class="container my-5">
+  <h2 class="mb-4">Preguntas Frecuentes</h2>
+
+  <div class="accordion" id="faqAccordion">
+    <!-- Pregunta 1 -->
+    <div class="accordion-item">
+      <p class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Pregunta 1: ¿Cómo sé mi nivel de idioma?
+        </button>
+      </p>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+           data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Realizamos una prueba de evaluación el primer día y, a partir de los resultados, diseñamos un plan de estudios adaptado a tus necesidades.
+        </div>
+      </div>
+    </div>
+
+    <!-- Pregunta 2 -->
+    <div class="accordion-item">
+      <p class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Pregunta 2: ¿Cuántas horas puedo dedicar a la semana?
+        </button>
+      </p>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+           data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Recomendamos dos horas semanales, aunque puedes ampliar la carga horaria según tu disponibilidad.
+        </div>
+      </div>
+    </div>
+
+    <!-- Pregunta 3 -->
+    <div class="accordion-item">
+      <p class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Pregunta 3: ¿Cómo empiezo?
+        </button>
+      </p>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+           data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Escríbenos a <a href="mailto:infolaboratoriodeingles506@gmail.com">infolaboratoriodeingles506@gmail.com</a> o envíanos un Whatsapp al
+          <a href="https://wa.me/50684069995">8406 9995</a>.
+        </div>
+      </div>
+    </div>
+
+    <!-- Pregunta 4 -->
+    <div class="accordion-item">
+      <p class="accordion-header" id="headingFour">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          Pregunta 4: ¿Cuáles son las opciones de pago?
+        </button>
+      </p>
+      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+           data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Aceptamos transferencia bancaria, PayPal, Payoneer y criptomonedas (Bitcoin/Ethereum).
+        </div>
+      </div>
+    </div>
+
+    <!-- Pregunta 5 -->
+    <div class="accordion-item">
+      <p class="accordion-header" id="headingFive">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+          Pregunta 5: ¿Las clases son presenciales o en línea?
+        </button>
+      </p>
+      <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+           data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Ofrecemos modalidad híbrida; puedes asistir en línea, presencialmente o combinar ambas según tu conveniencia.
+        </div>
+      </div>
+    </div>
+
+    <!-- Pregunta 6 -->
+    <div class="accordion-item">
+      <p class="accordion-header" id="headingSix">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+          Pregunta 6: ¿Las clases son individuales o grupales?
+        </button>
+      </p>
+      <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+           data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Disponemos de sesiones uno a uno y de grupos reducidos (máx. 5 estudiantes) para garantizar atención personalizada.
+        </div>
+      </div>
+    </div>
+
+    <!-- Pregunta 7 -->
+    <div class="accordion-item">
+      <p class="accordion-header" id="headingSeven">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+          Pregunta 7: ¿Qué metodología utilizan los profesores?
+        </button>
+      </p>
+      <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+           data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Aplicamos enfoque comunicativo, aprendizaje basado en tareas y material auténtico para desarrollar fluidez práctica.
+        </div>
+      </div>
+    </div>
+
+    <!-- Pregunta 8 -->
+    <div class="accordion-item">
+      <p class="accordion-header" id="headingEight">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+          Pregunta 8: ¿Qué sucede si pierdo una clase?
+        </button>
+      </p>
+      <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
+           data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Puedes reprogramar sin costo con 24 h de antelación. Si no avisas, la clase se considera perdida y se hará el cobro correspondiente.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+<!-- 2️⃣  Botón flotante WA (clase única) -->
+<a href="https://wa.me/84069995?text=Hola%2C%20quisiera%20información"
+   class="wa-float"  
+   target="_blank" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- 3️⃣  Estilos del botón  (después de Bootstrap) -->
+<style>
+  .wa-float{
+    position: fixed;
+    bottom: 2rem;      /* separación desde abajo */
+    right: 2rem;       /* separación desde la derecha */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background:#25d366;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:32px;
+    box-shadow:0 4px 10px rgba(0,0,0,.25);
+    z-index:999;       /* por encima de todo */
+    transition:transform .2s, box-shadow .2s;
+    text-decoration: none;
+  }
+  .wa-float:hover{
+    transform:scale(1.1);
+    box-shadow:0 6px 14px rgba(0,0,0,.3);
+    text-decoration:none;
+  }
+</style>
+
+
+
+
+
+      <script src="./js/index.js"></script>
+<footer class="bg-brand text-white mt-5 py-4">
+  <div class="container-lg">
+    <!-- FILA 1: CONTACTO, DIRECCIÓN, HORARIO, ENLACES ÚTILES -->
+    <div class="row text-center text-md-start gy-4 mb-4">
+      <div class="col-md-3">
+        <h5 class="mb-2">Contacto</h5>
+        <p class="small mb-1">
+          <a href="https://wa.me/50684069995" target="_blank"
+             class="link-light text-decoration-none">
+            <i class="fab fa-whatsapp me-2 fs-5"></i>
+            +506&nbsp;8406&nbsp;9995
+          </a>
+        </p>
+        <p class="small mb-0">
+          <a href="mailto:infolaboratoriodeingles506@gmail.com"
+             class="link-light text-decoration-none">
+            <i class="fas fa-envelope me-2 fs-5"></i>
+            infolaboratoriodeingles506@gmail.com
+          </a>
+        </p>
+      </div>
+
+      <div class="col-md-3">
+        <h5 class="mb-2">Dirección</h5>
+        <p class="small mb-0">
+          Vergel, Osa,<br>
+          Puntarenas, Costa Rica
+        </p>
+      </div>
+
+      <div class="col-md-3">
+        <h5 class="mb-2">Horario</h5>
+        <p class="small mb-0">
+          Lun–Vie: 8:00 AM – 8:00 PM<br>
+          Sáb: 9:00 AM – 1:00 PM<br>
+          Dom: Cerrado
+        </p>
+      </div>
+
+      <div class="col-md-3 text-md-end">
+        <h5 class="mb-2">Enlaces útiles</h5>
+        <p class="small mb-1">
+          <a href="./privacyandpolicies.html" class="link-light text-decoration-none">Política de Privacidad</a>
+        </p>
+        <p class="small mb-0">
+          <a href="./privacyandpolicies.html" class="link-light text-decoration-none">Términos y Condiciones</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- FILA 2: LOGO CENTRADO -->
+    <div class="row mb-4">
+      <div class="col-12 text-center">
+        <a href="index.html" class="d-inline-block">
+          <img src="img/transparentlogo.png"
+               alt="Logo El Laboratorio de Idiomas"
+               width="150" height="150"
+               class="rounded-circle"
+               loading="lazy">
+        </a>
+      </div>
+    </div>
+
+    <!-- FILA 3: CRÉDITOS -->
+    <div class="row">
+      <div class="col-12 text-center">
+        <p class="small mb-0">
+          Sitio desarrollado por&nbsp;
+          <a href="https://www.nativainnovations.com"
+             class="link-light text-decoration-none fw-semibold"
+             target="_blank">
+            Nativa&nbsp;Innovations
+          </a>
+          &copy; 2025
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  </body>
+</html>

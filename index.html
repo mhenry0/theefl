@@ -8,11 +8,15 @@
     Clases de inglés para principiantes,Clases de inglés conversacional,Mejora tu inglés para el trabajo,Preparación para exámenes de inglés,Clases de inglés con profesores nativos,Cursos de inglés personalizados,Aprender inglés de forma divertida,
     Inglés para viajes,Inglés para negocios">
     <meta name="author" content="Sebastian Mora">
+    
+<!-- ① Add this in <head> (after Bootstrap’s CSS) -->
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/styles.css" media="screen">
-    <link rel="shortcut icon" type="icon" href="img/whitelogo.png">
-    <title>El Laboratorio de Idiomas 506</title>
+    <link rel="shortcut icon" type="icon" href="img/logonegrotransparente.png">
+    <title>El Laboratorio de Inglés 506</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />   
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">  
   </head>
 
   <!-- Google tag (gtag.js) -->
@@ -24,81 +28,441 @@
 
   gtag('config', 'G-D9TVSGVDY0');
 </script>
-<p style="text-align: center; background-color: rgb(7, 44, 164); padding: 30px; color: white; font-size: 20px; text-align: center;">¡Matrículate Hoy! ¡Escribenos al +506 6357 6163, y termina este 2024 
-  siendo bilingüe! Estudiantes universitarios cuentan con un 15% de descuento en los cursos individuales de inglés</p>
   <body>
-    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #001E50;">
-      <div class="container-fluid">
-       <!-- Logo Section -->
-<a href="index.html" class="navbar-brand d-flex align-items-center">
-  <img src="img/transparentlogo.png" alt="El Laboratorio de Idiomas Logo" class="rounded-pill" style="width: 80px; margin-right: 10px;">
-</a>
 
 
-        <!-- Toggler for Small Screens -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-    
-        <!-- Navbar Links -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html" style="font-size: 18px; font-weight: 500;">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="methodology.html" style="font-size: 18px;">Metodología</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="pricing.html" style="font-size: 18px;">Servicios</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html" style="font-size: 18px;">Contacto</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="us.html" style="font-size: 18px;">Nosotros</a>
-            </li>
-          </ul>
-        </div>
+
+
+ <!-- ===== NAVBAR CORPORATIVO ===== -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-brand shadow-sm">
+    <div class="container-lg">
+
+      <!-- LOGO A LA IZQUIERDA -->
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="img/transparentlogo.png" alt="Logo El Laboratorio de Idiomas"
+             width="56" height="56" class="rounded-pill" loading="lazy">
+      </a>
+
+      <!-- TOGGLER (móviles) -->
+      <button class="navbar-toggler border-0" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- ENLACES + BOTÓN (derecha) -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav mb-2 mb-lg-0 text-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link px-3" href="index.html">Inicio</a></li>
+                              <li class="nav-item"><a class="nav-link px-3" href="metodologia.html">Metodología</a></li>
+
+          <li class="nav-item"><a class="nav-link px-3" href="cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="nosotros.html">Nosotros</a></li>
+
+        </ul>
+
+        
       </div>
-    </nav>
+    </div>
+  </nav>
+<!-- ===== ESTILOS PERSONALIZADOS ===== -->
+<style>
+  /* Fondo corporativo */
+  .bg-brand { background-color: #001E50; }
+
+  /* Links – colores */
+  .navbar-dark .nav-link {
+    position: relative;                       /* ⚠️ necesario para pseudo-elemento */
+    color: rgba(255, 255, 255, 0.85);
+    transition: color .2s;
+  }
+  .navbar-dark .nav-link:hover,
+  .navbar-dark .nav-link.active {
+    color: #ffffff;
+    text-decoration: none;                    /* sin subrayado clásico */
+  }
+
+  /* ===== Barra animada (excepto el botón) ===== */
+  .navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;                                  /* se extiende a todo el ancho */
+    bottom: -4px;                             /* distancia bajo el texto */
+    width: 100%;
+    height: 2px;                              /* grosor de la barra */
+    background: #ffffff;
+    transform: scaleX(0);                     /* inicia oculta desde el centro */
+    transform-origin: center;                 /* se “abre” hacia ambos lados */
+    transition: transform .3s ease-out;
+  }
+  .navbar-nav .nav-link:hover::after,
+  .navbar-nav .nav-link.active::after {
+    transform: scaleX(1);                     /* barra visible al 100 % */
+  }
+</style>
+
+
+
+
+
+<!-- ===== SLIDER HERO · CURSOS DE INGLÉS ===== -->
+<style>
+  #cursosHero .carousel-item {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+  }
+  #cursosHero .carousel-caption {
+    top: 70%;
+    transform: translateY(-50%);
+    left: 10%;
+    right: auto;
+    bottom: auto;
+    text-align: left;
+  }
+  #cursosHero .carousel-caption p {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  #cursosHero .carousel-caption p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+
+
+  
+</style>
+
+<div id="cursosHero" class="carousel slide carousel-fade" data-bs-interval="false">
+  <!-- Slides -->
+  <div class="carousel-inner">
+
+    <!-- Slide 1 -->
+    <div class="carousel-item active" style="background-image: url('img/slider1.jpg');">
+      <div class="carousel-caption d-block" >
+        <p class="fs-4">Descubre Nuestros Cursos de Inglés</p>
+        <p class="fs-4">Desde nivel básico hasta avanzado, tenemos el programa perfecto para ti.</p>
+<style>
+  .btn-animated {
+    position: relative;
+    overflow: hidden;
+    background: #001E50;
+    color: #ffffff;
+    text-decoration: none;        /* quita subrayado */
+    transition: color 0.4s ease;
+  }
+
+  .btn-animated::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: #ffffff;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+    z-index: 0;
+  }
+
+  .btn-animated span {
+    position: relative;
+    z-index: 1;
+  }
+
+  .btn-animated:hover {
+    color: #001E50;
+    text-decoration: none;        /* quita subrayado al hover */
+  }
+
+  .btn-animated:hover::before {
+    transform: scaleX(1);
+  }
+</style>
+
+<a href="./cursos.html" class="btn btn-lg btn-animated">
+  <span>Ver Cursos</span>
+</a>
+      </div>
+    </div>
+
+
+    
+    <!-- Slide 2 -->
+    <div class="carousel-item" style="background-image: url('img/slider2.jpg');">
+      <div class="carousel-caption d-block">
+        <p class="fs-4">Nuestra Metodología</p>
+        <p class="fs-4">Porque la metodología se centra en el aprendizaje práctico y comunicativo, conocé más sobre nuestro enfoque aquí.</p>
+
+<a href="./metodologia.html" class="btn btn-lg btn-animated">
+  <span>Ver Metodología</span>
+</a>      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-item" style="background-image: url('img/slider3.jpg');">
+      <div class="carousel-caption d-block">
+        <p class="fs-4">Agenda tu Cita</p>
+        <p class="fs-4">Reserva una sesión de diagnóstico gratuita y conoce nuestro método.</p>
+
+<a href="./contacto.html" class="btn btn-lg btn-animated">
+  <span>Agendar Cita</span>
+</a>      </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="carousel-item" style="background-image: url('img/slider4.jpg');">
+      <div class="carousel-caption d-block">
+        <p class="fs-4">Sobre Nosotros</p>
+        <p class="fs-4">Conoce al equipo y nuestra visión para transformar tu aprendizaje.</p>
+
+<a href="./nosotros.html" class="btn btn-lg btn-animated">
+  <span>Sobre el Proyecto</span>
+</a>      </div>
+    </div>
+
+  </div>
+
+  <!-- Controles -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#cursosHero" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#cursosHero" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Siguiente</span>
+  </button>
+
+  <!-- Indicadores -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#cursosHero" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#cursosHero" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#cursosHero" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#cursosHero" data-bs-slide-to="3" aria-label="Slide 4"></button>
+  </div>
+</div>
+
+
+
+
     
     <img src="img/whitelogo.png" alt="logo of the website" style="display: block; margin: 0 auto; width: 300px;">
-    <h1 class="text-center">¡Bienvenidos al Laboratorio de Idiomas 506! </h1>
+    <h1 class="text-center" style="color: #001E50;">¡Bienvenidos al Laboratorio de Inglés 506! </h1>
     <br>
-    <figure class="text-center">
-      <blockquote class="blockquote">
-        <p>“Because when you speak a language, English, well many people understand you, including Afrikaners, 
-          but when you speak Afrikaans, you know you go straight to their hearts.”</p>
-      </blockquote>
-      <figcaption class="blockquote-footer">
-        <cite title="Source Title">Nelson Mandela by Himself</cite>
-      </figcaption>
-    </figure>
+
+
+
+
     <br>
     <div class="container">
   <p class="subhead">
           
-      En el Laboratorio de Idiomas 506 nuestros cursos están meticulosamente diseñados para satisfacer las necesidades específicas de individuos, grupos y empresas por igual.
-      <br>
-      <br> 
-      Cada curso se adhiere a los estimados estándares de la prestigiosa Universidad de Cambridge. 
-      <br>
-      <br> 
-      Además, hemos desarrollado un plan de estudios personalizado basado en un libro de referencia completo junto con nuestros propios recursos seleccionados.
-      <br>
-      <br> 
-      Nuestras clases están estructuradas en tres niveles, adaptadas a diferentes duraciones y alineadas con los estándares del MCER. 
-      <br>
-    <p>El Marco Común Europeo de Referencia para las Lenguas (MCER) se utiliza para categorizar el nivel en el que se encuentra un estudiante respecto al aprendizaje de un idioma. 
-      <br>
+  <p>
+  En el <strong>Laboratorio de Idiomas 506</strong> creamos experiencias de
+  aprendizaje únicas para ti. Nuestros cursos, alineados con los estándares de la
+  <em>Universidad de Cambridge</em>, combinan un libro de referencia de alta
+  calidad con materiales exclusivos diseñados por nuestro equipo. 
+  
+  <br><br>Cada programa se
+  adapta a tus metas y se organiza en tres niveles personalizados, basados en el
+  <strong>Marco Común Europeo de Referencia para las Lenguas (MCER)</strong>, para
+  que avances de manera clara y efectiva. 
+  
+  <br>
+  <br>¡Descubre tu verdadero potencial
+  comunicativo con nosotros!
+</p>
+
+
+
+<!-- ===== SECCIÓN · POR QUÉ ELEGIRNOS ===== -->
+<section id="por-que-elegirnos" class="container py-5">
+  <div class="text-center mb-5">
+    <h2 class="text-center" style="color: #001E50;">
+      ¿Por qué elegir nuestras clases?
+    </h2>
+  </div>
+
+  <div class="row g-4">
+    <!-- Atención Personalizada -->
+    <div class="col-md-6 col-lg-3">
+      <div class="card h-100 border-0 shadow-sm text-center py-4">
+        <i class="bi bi-person-check display-4 text-primary mb-3" aria-hidden="true"></i>
+        <p class="card-title mb-2 fw-semibold">Atención Personalizada</p>
+        <p class="card-text small">
+          Clases adaptadas a tu ritmo y objetivos, con seguimiento continuo de tu progreso.
+        </p>
+      </div>
+    </div>
+
+    <!-- Material de Excelencia -->
+    <div class="col-md-6 col-lg-3">
+      <div class="card h-100 border-0 shadow-sm text-center py-4">
+        <i class="bi bi-journal-bookmark display-4 text-primary mb-3" aria-hidden="true"></i>
+        <p class="card-title mb-2 fw-semibold">Material de Excelencia</p>
+        <p class="card-text small">
+          Recursos avalados por Cambridge y contenidos propios, para un aprendizaje sólido.
+        </p>
+      </div>
+    </div>
+
+    <!-- Profesores Expertos -->
+    <div class="col-md-6 col-lg-3">
+      <div class="card h-100 border-0 shadow-sm text-center py-4">
+        <i class="bi bi-mortarboard display-4 text-primary mb-3" aria-hidden="true"></i>
+        <p class="card-title mb-2 fw-semibold">Profesores Expertos</p>
+        <p class="card-text small">
+          Docentes certificados con amplia experiencia internacional y enfoque práctico.
+        </p>
+      </div>
+    </div>
+
+    <!-- Horarios Flexibles -->
+    <div class="col-md-6 col-lg-3">
+      <div class="card h-100 border-0 shadow-sm text-center py-4">
+        <i class="bi bi-calendar-check display-4 text-primary mb-3" aria-hidden="true"></i>
+        <p class="card-title mb-2 fw-semibold">Horarios Flexibles</p>
+        <p class="card-text small">
+          Modalidades presenciales, en línea e híbridas, con horarios adaptables a tu agenda.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<style>
+/* === PARALLAX SECTION (FULL-WIDTH) === */
+.parallax-bg {
+  background-image: url('/img/slider2.jpg');  /* ✅ tu imagen */
+  height: 110vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;               /* efecto parallax */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+
+  /* 👉 Fuerza ancho completo, incluso dentro de .container */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);  /* rompe los márgenes del contenedor */
+}
+
+/* Capa semitransparente para contraste */
+.parallax-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 1;
+}
+
+/* Contenido superpuesto */
+.parallax-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 1rem 2rem;
+}
+
+.parallax-content h2 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 700;
+}
+
+.parallax-btn {
+  margin-top: 1.25rem;
+  padding: 0.8rem 2.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 50px;
+  background: #b90101;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.parallax-btn:hover { background: #001E50; color: #fff; text-decoration: none; }
+
+/* Fallback iOS/Android */
+@media (max-width: 992px) {
+  .parallax-bg {
+    background-attachment: scroll;
+    height: 60vh;
+  }
+}
+</style>
+
+<!-- ===== SECCIÓN PARALLAX (FULL-WIDTH) ===== -->
+<section class="parallax-bg">
+  <div class="parallax-content">
+    <h2>Tu camino de aprendizaje comienza acá</h2>
+    <p>
+      En el Laboratorio de Idiomas 506, te ofrecemos una experiencia única para aprender inglés de manera efectiva y significativa. 
+      Nuestros cursos están diseñados para adaptarse a tus necesidades y objetivos, utilizando materiales de alta calidad y un enfoque práctico.
+    </p>
+    <a href="./cursos.html" class="parallax-btn">Ver Cursos</a>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <h3 class="text-center" style="margin-top: 50px; margin-bottom: 20px; color: #001E50;">Niveles del Marco Común Europeo de Referencia para las Lenguas (MCER)</h3>
+
+      
     <div class="accordion" id="accordionPanelsStayOpenExample">
       <div class="accordion-item">
-        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+        <p class="accordion-header" id="panelsStayOpen-headingOne">
           <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
             PRINCIPIANTE A1 - A2
           </button>
-        </h2>
+        </p>
         <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
           <div class="accordion-body">
             <strong>Este es el primer nivel A1 y A2 </strong> 
@@ -124,11 +488,11 @@
         </div>
       </div>
       <div class="accordion-item">
-        <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+        <p class="accordion-header" id="panelsStayOpen-headingTwo">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
             INTERMEDIO B1 - B2
           </button>
-        </h2>
+        </p>
         <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
           <div class="accordion-body">
             <strong>Este es el segundo nivel B1 y B2</strong> 
@@ -150,11 +514,11 @@
         </div>
       </div>
       <div class="accordion-item">
-        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+        <p class="accordion-header" id="panelsStayOpen-headingThree">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
             AVANZADO C1 - C2
           </button>
-        </h2>
+        </p>
         <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
           <div class="accordion-body">
             <strong>Este es el tercer nivel C1 y C2 </strong> 
@@ -177,78 +541,140 @@
       </div>
     </div>
     <br> 
-    <b>Por favor</b>, lea la siguiente sección sobre Metodología para saber más sobre este impresionante proyecto. Puede hacer clic aquí para pasar a la página siguiente.
-    <a href="methodology.html"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
-      <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
-    </svg></a>
-    <br>
-    <br>
-    <div class="container">
-      <h3>Preguntas Frecuentes</h3>
-      <div class="faq-columns">
-          <div class="faq-column">
-            <h4 class="question">Pregunta 1: ¿Cómo sé mi nivel de idioma?</h4>
-            <p class="answer">Respuesta 1: Realizamos una prueba de evaluación el primer día, a partir de ahí planificamos un currículum en función de las habilidades demostradas.</p>
-            <h4 class="question">Pregunta 2: ¿Cuántas horas puedo dedicar a la semana?</h4>
-            <p class="answer">Respuesta 2: Las clases se organizan dos horas por semana. Sin embargo, se puede ampliar hasta tener más de 2 horas.</p>
-          </div>
-          <div class="faq-column">
-            <h4 class="question">Pregunta 3: ¿Cómo empiezo?</h4>
-            <p class="answer">Respuesta 3: Escríbenos un email a infolaboratoriodeidiomas506@gmail.com, o escríbenos un mensaje directo al Whatsapp 6357 6163</p>
-            <h4 class="question">Pregunta 4: ¿Cuáles son las opciones de pago?</h4>
-            <p class="answer">Respuesta 4: Aceptamos pagos mediante transferencia bancaria, PayPal, Payoneer y Crypto (Bitcoin/Ethereum).</p>
-          </div>
-          </div>
-        </div>
+ 
+
+    
+
+
       </nav>
     </div>
 
 
 
-      <!-- render the button and direct it to wa.me -->
-      <a href="https://wa.me/63576163?text=Bienvenido%20al%20chat%20oficial%20del%20Laboratorio de Idiomas 506" class="floating" target="_blank">
-        <i class="fab fa-whatsapp fab-icon"></i>
-        </a>
-      <button id="backToTopBtn" class="btn btn-primary" title="Back to Top">Top</button>
+ 
+<!-- 2️⃣  Botón flotante WA (clase única) -->
+<a href="https://wa.me/84069995?text=Hola%2C%20quisiera%20información"
+   class="wa-float"  
+   target="_blank" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- 3️⃣  Estilos del botón  (después de Bootstrap) -->
+<style>
+  .wa-float{
+    position: fixed;
+    bottom: 2rem;      /* separación desde abajo */
+    right: 2rem;       /* separación desde la derecha */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background:#25d366;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:32px;
+    box-shadow:0 4px 10px rgba(0,0,0,.25);
+    z-index:999;       /* por encima de todo */
+    transition:transform .2s, box-shadow .2s;
+    text-decoration: none;
+  }
+  .wa-float:hover{
+    transform:scale(1.1);
+    box-shadow:0 6px 14px rgba(0,0,0,.3);
+    text-decoration:none;
+  }
+</style>
+
+
+
+
+
 
       <script src="./js/index.js"></script>
 
-      <div class="mt-5 p-3 text-white text-center" style="background-color: #001E50;">
-        <div class="mb-3">
-          <h5>Contact Us</h5>
-      <p>
-        <a href="https://wa.me/50663576163" target="_blank" style="text-decoration: none; color: white;">
-          <i class="fab fa-whatsapp me-2" style="font-size: 20px;"></i>
-          <span>WhatsApp: +506 6357 6163</span>
-        </a>
-      </p>
-      <p>
-        <a href="mailto:infolaboratoriodeidiomas506@gmail.com" target="_blank" style="text-decoration: none; color: inherit;">
-          <i class="fa fa-envelope me-2" style="font-size: 20px;"></i>
-          <span>Email: infolaboratoriodeidiomas506@gmail.com</span>
-        </a>
-      </p>
-
-      <a href="https://www.tiktok.com/@laboratoriodeidiomas506" style="color: white; text-decoration: none; margin: 0 10px;" target="_blank">
-        <i class="fab fa-tiktok"></i>
-      </a>
-      <a href="https://www.instagram.com/el_laboratorio_de_idiomas_506" style="color: white; text-decoration: none; margin: 0 10px;" target="_blank">
-        <i class="fab fa-instagram"></i>
-      </a>
-
-        </div>
-
-        <hr style="border-color: rgba(255, 255, 255, 0.2);">
-
-        <p class="mb-2">Website developed by Nativa Innovations &copy; 2024. All rights reserved.</p>
-        <p>
-          Support local developers:
-          <a href="//www.buymeacoffee.com/nexusbytesinnovations" target="_blank" style="color: #FFD700; text-decoration: none;">
-            Buy Me a Coffee
+<footer class="bg-brand text-white mt-5 py-4">
+  <div class="container-lg">
+    <!-- FILA 1: CONTACTO, DIRECCIÓN, HORARIO, ENLACES ÚTILES -->
+    <div class="row text-center text-md-start gy-4 mb-4">
+      <div class="col-md-3">
+        <p class="mb-2">Contacto</p>
+        <p class="small mb-1">
+          <a href="https://wa.me/50684069995" target="_blank"
+             class="link-light text-decoration-none">
+            <i class="fab fa-whatsapp me-2 fs-5"></i>
+            +506&nbsp;8406&nbsp;9995
+          </a>
+        </p>
+        <p class="small mb-0">
+          <a href="mailto:infolaboratoriodeingles506@gmail.com"
+             class="link-light text-decoration-none">
+            <i class="fas fa-envelope me-2 fs-5"></i>
+            infolaboratoriodeingles506@gmail.com
           </a>
         </p>
       </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+      <div class="col-md-3">
+        <p class="mb-2">Dirección</p>
+        <p class="small mb-0">
+          Vergel, Osa,<br>
+          Puntarenas, Costa Rica
+        </p>
+      </div>
+
+      <div class="col-md-3">
+        <p class="mb-2">Horario</p>
+        <p class="small mb-0">
+          Lun–Vie: 8:00 AM – 8:00 PM<br>
+          Sáb: 9:00 AM – 1:00 PM<br>
+          Dom: Cerrado
+        </p>
+      </div>
+
+      <div class="col-md-3 text-md-end">
+        <p class="mb-2">Enlaces útiles</p>
+        <p class="small mb-1">
+          <a href="./privacyandpolicies.html" class="link-light text-decoration-none">Política de Privacidad</a>
+        </p>
+        <p class="small mb-0">
+          <a href="./privacyandpolicies.html" class="link-light text-decoration-none">Términos y Condiciones</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- FILA 2: LOGO CENTRADO -->
+    <div class="row mb-4">
+      <div class="col-12 text-center">
+        <a href="index.html" class="d-inline-block">
+          <img src="img/transparentlogo.png"
+               alt="Logo El Laboratorio de Idiomas"
+               width="150" height="150"
+               class="rounded-circle"
+               loading="lazy">
+        </a>
+      </div>
+    </div>
+
+    <!-- FILA 3: CRÉDITOS -->
+    <div class="row">
+      <div class="col-12 text-center">
+        <p class="small mb-0">
+          Sitio desarrollado por&nbsp;
+          <a href="https://www.nativainnovations.com"
+             class="link-light text-decoration-none fw-semibold"
+             target="_blank">
+            Nativa&nbsp;Innovations
+          </a>
+          &copy; 2025
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
   </body>
 </html>

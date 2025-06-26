@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Reading · Saludos y Presentaciones</title>
+
+  <!-- Bootstrap 5.3.7 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    .check-btn{ min-width:120px }
+    .result   { font-weight:600 }
+    .icon     { font-size:1.4rem }
+  </style>
+</head>
+<body>
+
+  <!-- CABECERA -->
+  <header class="bg-success text-white text-center py-3">
+    <h1 class="h4 mb-0">Lectura · Saludos y Presentaciones</h1>
+  </header>
+
+  <!-- TEXTO DE LECTURA -->
+  <main class="container my-5">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h2 class="h5 mb-3">Lee el texto</h2>
+        <p><strong>Hi! My name is Laura.</strong> I’m from San José, Costa Rica.
+           Today is my first day at the English course. At the door I meet a classmate.</p>
+        <p>
+          <strong>Laura:</strong> Hi, good morning!<br>
+          <strong>Tom:</strong> Hello! My name is Tom. What’s your name?<br>
+          <strong>Laura:</strong> I’m Laura. Nice to meet you, Tom.<br>
+          <strong>Tom:</strong> Nice to meet you too, Laura. Where are you from?<br>
+          <strong>Laura:</strong> I’m from San José. And you?<br>
+          <strong>Tom:</strong> I’m from Cartago. Are you ready for the class?<br>
+          <strong>Laura:</strong> Yes, I’m excited! Let’s go.
+        </p>
+      </div>
+    </div>
+
+    <!-- PREGUNTAS -->
+    <div class="card mt-4 shadow-sm">
+      <div class="card-body">
+        <h2 class="h5 mb-3">Comprensión</h2>
+
+        <!-- P1 -->
+        <p class="mb-2 fw-semibold">1. ¿De dónde es Laura?</p>
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <select class="form-select w-auto" id="p1">
+            <option value="">Elige una opción</option>
+            <option value="a">Cartago</option>
+            <option value="b">San José</option>
+            <option value="c">Heredia</option>
+          </select>
+          <i id="i1" class="icon"></i>
+        </div>
+
+        <!-- P2 -->
+        <p class="mb-2 fw-semibold">2. ¿Quién saluda primero a la otra persona?</p>
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <select class="form-select w-auto" id="p2">
+            <option value="">Elige una opción</option>
+            <option value="a">Tom saluda primero</option>
+            <option value="b">Laura saluda primero</option>
+          </select>
+          <i id="i2" class="icon"></i>
+        </div>
+
+        <!-- P3 -->
+        <p class="mb-2 fw-semibold">3. ¿Cómo se sienten antes de la clase?</p>
+        <div class="d-flex align-items-center gap-2 mb-4">
+          <select class="form-select w-auto" id="p3">
+            <option value="">Elige una opción</option>
+            <option value="a">Laura está nerviosa y Tom aburrido</option>
+            <option value="b">Ambos están emocionados</option>
+            <option value="c">Los dos están cansados</option>
+          </select>
+          <i id="i3" class="icon"></i>
+        </div>
+
+        <button class="btn btn-primary check-btn" onclick="check()">Comprobar</button>
+        <span id="score" class="ms-3 result"></span>
+      </div>
+    </div>
+
+    <!-- REGRESAR -->
+    <div class="text-center mt-5">
+      <a href="./temasbasicos.html" class="btn btn-outline-secondary">← Regresar al Temario</a>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const answers = { p1:'b', p2:'b', p3:'b' };
+    function icon(el, ok){
+      el.className = 'icon bi ' + (ok ? 'bi-check-circle-fill text-success'
+                                     : 'bi-x-circle-fill text-danger');
+    }
+    function check(){
+      let correct = 0;
+
+      ['p1','p2','p3'].forEach((id, idx)=>{
+        const val = document.getElementById(id).value;
+        const ico = document.getElementById('i'+(idx+1));
+        const ok  = val === answers[id];
+        if(val) icon(ico, ok);                    // solo muestra icono si se eligió algo
+        else   ico.className = 'icon';            // sin respuesta: sin icono
+        if(ok) correct++;
+      });
+
+      const score = document.getElementById('score');
+      if(correct === 3){
+        score.textContent = '✓ ¡Excelente! 3/3';
+        score.className   = 'result text-success';
+      } else {
+        score.textContent = `Obtuviste ${correct}/3 – inténtalo de nuevo`;
+        score.className   = 'result text-danger';
+      }
+    }
+  </script>
+</body>
+</html>

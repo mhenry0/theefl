@@ -50,14 +50,6 @@ button {
 }
 
 
-.navbar-brand {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-
-
 
 
 .slider {
@@ -82,28 +74,111 @@ flex-shrink: 0;
 }
 
 
-.navbar{
-  background-color: #111fb6;
-  font-style: bold;
-  
-}
 
 
 
 
 
+  /* Fondo corporativo */
+  .bg-brand { background-color: #001E50; }
 
-
-
-@media (max-width: 768px) {
-  /* Styles for screens smaller than 768px (e.g., smartphones) */
-  .navbar-nav {
-    /* Adjust navigation for mobile, likely stacking vertically */
-    flex-wrap: wrap; /* Wrap navigation items to multiple lines */
-    justify-content: center; /* Center navigation items horizontally */
+  /* Links – colores */
+  .navbar-dark .nav-link {
+    position: relative;                       /* ⚠️ necesario para pseudo-elemento */
+    color: rgba(255, 255, 255, 0.85);
+    transition: color .2s;
   }
-}
+  .navbar-dark .nav-link:hover,
+  .navbar-dark .nav-link.active {
+    color: #ffffff;
+    text-decoration: none;                    /* sin subrayado clásico */
+  }
+
+  /* ===== Barra animada (excepto el botón) ===== */
+  .navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;                                  /* se extiende a todo el ancho */
+    bottom: -4px;                             /* distancia bajo el texto */
+    width: 100%;
+    height: 2px;                              /* grosor de la barra */
+    background: #ffffff;
+    transform: scaleX(0);                     /* inicia oculta desde el centro */
+    transform-origin: center;                 /* se “abre” hacia ambos lados */
+    transition: transform .3s ease-out;
+  }
+  .navbar-nav .nav-link:hover::after,
+  .navbar-nav .nav-link.active::after {
+    transform: scaleX(1);                     /* barra visible al 100 % */
+  }
 
 
 
 
+
+
+  .bg-brand { background-color: #001E50; }
+
+  /* Efecto hover en links y botón */
+  footer .link-light:hover       { color: #ffc107 !important; }
+  footer .btn-outline-light:hover{
+    color: #001E50;
+    background-color: #ffffff;
+    border-color: #ffffff;
+  }
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .btn-animated {
+    position: relative;
+    overflow: hidden;
+    background: #001E50;
+    color: #ffffff;
+    text-decoration: none;        /* quita subrayado */
+    transition: color 0.4s ease;
+  }
+
+  .btn-animated::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: #ffffff;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+    z-index: 0;
+  }
+
+  .btn-animated span {
+    position: relative;
+    z-index: 1;
+  }
+
+  .btn-animated:hover {
+    color: #001E50;
+    text-decoration: none;        /* quita subrayado al hover */
+  }
+
+  .btn-animated:hover::before {
+    transform: scaleX(1);
+  }
